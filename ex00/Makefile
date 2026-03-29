@@ -6,7 +6,7 @@
 #    By: ncarrera <ncarrera@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/03/29 17:51:41 by ncarrera          #+#    #+#              #
-#    Updated: 2026/03/29 18:52:53 by ncarrera         ###   ########.fr        #
+#    Updated: 2026/03/29 21:46:45 by ncarrera         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,9 @@ fclean: clean
 
 re: fclean all
 
-reclean: fclean all
+reclean:
+	@$(MAKE) fclean -s
+	@$(MAKE) all -s
+	@$(MAKE) clean -s
 
 .PHONY: all clean fclean re reclean
